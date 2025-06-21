@@ -1,0 +1,326 @@
+
+<div class="container">
+  <h4>Admin Page</h4>
+</div>
+<!-- Binding -->
+<!-- <p-dropdown [options]="cities" 
+          [(ngModel)]="selectedCity" 
+          (onChange)="onCityChange($event)" optionLabel="name"></p-dropdown> -->
+<!-- <div>
+<select [(ngModel)]="selectedCity" 
+        (ngModelChange)="onCityChange($event)">
+    <option [value]="city" *ngFor = "let city of cities" >{{city}}</option>
+</select>
+</div> -->
+
+<!-- <p-dropdown [options]="cities" 
+          [(ngModel)]="selectedCity" 
+          (onChange)="onCityChange($event)" optionLabel="name"></p-dropdown> -->
+<!-- <p>selectedCity:{{selectedCity}}</p> -->
+
+<!-- Control flow statements -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-3">
+      @if(controlFlowToggleShow == true){
+      <p>You are greate because you are using control flow statements</p>
+      }
+      @else {
+        <p>You are in false condition, get well soon</p>
+      }
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      @for (city of cities; track city) {
+        <p>{{city}}</p>
+      }
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-3">
+    
+
+    <button class="btn btn-primary" (click)="handleFlow(true)">Show</button>
+    <button class="btn btn-secondary" (click)="handleFlow(false)">Hide</button>
+</div> -->
+
+<!-- Signal -->
+
+<!-- <div class="container">
+  <div class="row">
+    <input type="text" [(ngModel)]="signalFirstName" placeholder="Enter your first name" />
+    <input type="text" [(ngModel)]="signalLastName" placeholder="Enter your last name" />
+  </div>
+</div>
+<p>you signal first name is here {{signalFirstName()}}</p>
+<p>{{signalLastName}}</p> -->
+
+<!-- linked Signal -->
+<!-- <div class="container">
+  <div class="row">
+    <h3>{{fullName()}}</h3>
+  </div>
+</div>
+<button class="btn btn-primary" (click)="handleLinkClick()">Linked Signal</button>
+<button class="btn btn-primary" (click)="handleLinkClick2()">Linked Signal</button>{{email()}} -->
+
+
+<!-- Forms -->
+<!-- <div class="container">
+  <form class="row g-3" #form="ngForm" >
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">First name<span class="text-danger">*</span></label>
+    <input type="text" class="form-control" #fname="ngModel" id="validationDefault01" name="firstName" [(ngModel)]="formData.firstName" required>
+    <div class="text-danger">
+      @if(fname.errors?.['required'] && fname.touched) {
+        <p>First name is Required</p>
+      }
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefault02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationDefault02" name="lastName" [(ngModel)]="formData.lastName" required>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefaultUsername" class="form-label" >Username</label>
+    <div class="input-group">
+      <span class="input-group-text" id="inputGroupPrepend2">&#64;</span>
+      <input type="text" class="form-control" id="validationDefaultUsername" name="userName" [(ngModel)]="formData.userName" aria-describedby="inputGroupPrepend2" required>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationDefault03" class="form-label">City</label>
+    <input type="text" class="form-control" id="validationDefault03" required>
+  </div>
+  <div class="col-md-3">
+    <label for="validationDefault04" class="form-label">State</label>
+    <select class="form-select" id="validationDefault04" name="state" [(ngModel)]="formData.state" required>
+      <option selected disabled value="">Choose...</option>
+      <option>Vizianagaram</option>
+      <option>Visakhapatnam</option>
+      <option>Vijayawada</option>
+      <option>Hyderabad</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label for="validationDefault05" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="validationDefault05" name="zip" [(ngModel)]="formData.zip" required>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" name="isValid" [(ngModel)]="formData.isValid" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" [disabled]="form.invalid" (click)="submit()" type="submit">Submit form</button>
+  </div>
+</form>
+</div> -->
+
+<!-- GET API -->
+ <!-- <div class="container">
+    <h4>Users data</h4>
+    <div class="row">
+      <div class="col-3">
+        <button class="btn btn-primary" (click)="getApiData()">Get Users and Products</button>
+      </div>
+    </div>
+ </div>
+<table  class="table table-striped" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>COMPANY</th>
+      <th>USRNAME</th>
+      <th>EMAIL</th>
+      <th>PHONE</th>
+      <th>ADDRESS</th>
+      <th>COUNTRY</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(user of userList;track user){
+      <tr>
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.company}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.address}}</td>
+      <td>{{user.country}}</td>
+      <td>
+        <button class="btn btn-primary" (click)="editUser(user)">Edit</button>
+        <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="8" class="text-center">
+        <button class="btn btn-success" (click)="getApiData()">Refresh Users</button>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+<div class="container">
+  <div class="row-3">
+    <select>
+      <option *ngFor="let product of products" [value]="product.product_id">{{product.name}}</option>
+    </select>
+
+</div> -->
+
+<!-- POST API -->
+
+<div class="container">
+  <div class="col-9">
+    <h4>Car List</h4>
+    <button class="btn btn-primary" (click)="getAllCars()">Get Car List</button>
+    <table class="table table-striped">
+      <thead>
+    <tr>
+      <th>ID</th>
+      <th>BRAND</th>
+      <th>MODEL</th>
+      <th>YEAR</th>
+      <th>COLOUR</th>
+      <th>DAILYRATE</th>
+      <th>REGNO</th>
+     
+    </tr>
+  </thead>
+      <tbody>
+    @for(user of carList();track user){
+      <tr>
+      <td>{{user.carId}}</td>
+      <td>{{user.brand}}</td>
+      <td>{{user.model}}</td>
+      <td>{{user.year}}</td>
+      <td>{{user.color}}</td>
+      <td>{{user.dailyRate}}</td>
+      <td>{{user.regNo}}</td>
+      <td>
+        <button class="btn btn-primary" (click)="editUser(user)">Edit</button>
+        <button class="btn btn-danger" (click)="deleteUserById(user.id)">Delete</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+    </table>
+  </div>
+  <div class="card col-6">
+    <div class="bg bg-warning card-header">
+      Add Car
+    </div>
+    
+    <form class=" card-body row g-3" >
+      <div class="col-6 mb-3">
+        <label for="brand" class="form-label">Brand</label>
+        <input type="text" class="form-control" id="brand" [(ngModel)]="carObj.brand" name="brand" required>
+      </div>
+      <div class="col-6 mb-3">
+        <label for="model" class="form-label">Model</label>
+        <input type="text" class="form-control" id="model" [(ngModel)]="carObj.model" name="model" required>
+      </div>
+      <div class="col-3 mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input type="number" class="form-control" id="year" [(ngModel)]="carObj.year" name="year" required>
+      </div>
+      <div class="col-3 mb-3">
+        <label for="color" class="form-label">Color</label>
+        <input type="text" class="form-control" id="color" [(ngModel)]="carObj.color" name="color" required>
+      </div>
+      <div class="col-3 mb-3">
+        <label for="dailyRate" class="form-label">Daily Rate</label>
+        <input type="number" class="form-control" id="dailyRate" [(ngModel)]="carObj.dailyRate" name="dailyRate" required>
+      </div>
+      <div class="col-3 mb-3">
+        <label for="regNo" class="form-label">Reg No</label>
+        <input type="text" class="form-control" id="regNo" [(ngModel)]="carObj.regNo" name="regNo" required>
+      </div>
+      <div class="col-3 mb-3">
+        <button class="btn btn-primary" (click)="updateCar(carObj)" type="button">Add Car</button>
+
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    {{resourceApiList.hasValue()}}
+  </div>
+  <div class="col-3">
+    @for (item of resourceApiList.value(); track $index) {
+      <li>{{item.name}}</li>
+    }
+  </div>
+  <div class="col-3">
+    {{resourceApiList.isLoading()}}
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary" (click)="reloadResource()">Get Resource API</button>
+  </div>
+</div>
+<div class="container">
+  <div>
+    <h4>Pipes</h4>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <p>{{pipeFirstName |uppercase}}</p>
+    </div>
+    <div class="col-3">
+      <p>{{datePipe | date}}</p>
+    </div>
+    <div class="col-3">
+      <p>{{pipeFirstName |titlecase}}</p>
+    </div>
+    <div class="col-3">
+      <p>{{carObj |json}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Color</th>
+          <th>Daily Rate</th>
+          <th>Reg No</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(car of carObj2; track car) {
+          <tr>
+            <td>{{car.brand | uppercase}}</td>
+            <td>{{car.model | lowercase}}</td>
+            <td>{{car.year | number:'1.0-0'}}</td>
+            <td>{{car.color | titlecase}}</td>
+            <td>{{car.dailyRate | currency:'USD':'symbol'}}</td>
+            <td>{{car.regNo | customPipe}}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="col-3 pt-5">
+  <app-user [progressValue]="progressVal" (progressValueChange)="progressValueChange($event)"></app-user>
+</div>
+<div *ngIf="userData$ | async as users">
+  <div *ngFor="let user of users">
+    <h2>{{user.name}}</h2>
+    <p>{{user.price}}</p>
+  </div>
+</div>

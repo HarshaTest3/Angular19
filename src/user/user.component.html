@@ -1,0 +1,111 @@
+<h4>User Page</h4>
+<div class="col-md-3">
+    <p>Interpolaton</p>
+    <p>Welcome to user page {{firstName}}</p>
+</div>
+
+<div class="col-md-3">
+    
+    <p>Propert Binding</p>
+    <input type="text" [value]="firstName" /><br>
+    <input type="text" [value]="lastName" /><br>
+
+</div>
+<div class="row">
+    <p>Event binding</p>
+    <div class="col-md-3">
+        <button (click)="onClick()"></button>
+    </div>
+    <div class="col-md-3">
+        <select (change)="onChange($event)">
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+
+        </select>
+
+    </div>
+
+</div>
+<h3>Reactive Form</h3>
+<div class="container">
+<form class="row g-3 needs-validation" [formGroup]="form" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" formControlName="firstName" id="validationCustom01" value="Mark">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" formControlName="lastName" value="Otto">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
+      <input type="text" class="form-control" id="validationCustomUsername" formControlName="userName" aria-describedby="inputGroupPrepend">
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">City</label>
+    <input type="text" class="form-control" formControlName="city" id="validationCustom03">
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">State</label>
+    <select class="form-select" id="validationCustom04" formControlName="state">
+      <option selected disabled value="">Choose...</option>
+      <option>Vizianagaram</option>
+      <option>Visakhapatnam</option>
+      <option>Vijayawada</option>
+      <option>Hyderabad</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="validationCustom05" formControlName="zip">
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" formControlName="isValid" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    {{form.valid}}{{form.invalid}}
+    <button class="btn btn-primary" [disabled]="form.invalid" type="submit">Submit form</button>
+  </div>
+</form>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progressValue+'%'}" >
+    <span class="sr-only">{{progressValue}}%</span>
+  </div>
+</div>
+<div class="btn-group">
+    <button type="submit" class="btn btn-primary" (click)="increaseProgress()">Increase</button>
+    <button type="submit" class="btn btn-primary" (click)="decreaseProgress()">Decrease</button>
+</div>

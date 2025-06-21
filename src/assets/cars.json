@@ -1,0 +1,112 @@
+[
+    {
+      "carId": 4764,
+      "brand": "Mazda",
+      "model": "RX-8",
+      "year": 2008,
+      "color": "White",
+      "dailyRate": 6701,
+      "carImage": "https://static0.topspeedimages.com/wordpress/wp-content/uploads/jpg/200812/mazda-rx-8-circuit-t.jpg",
+      "regNo": "M-2008"
+    },
+    {
+      "carId": 4802,
+      "brand": "Toyota",
+      "model": "rx7",
+      "year": 2024,
+      "color": "",
+      "dailyRate": 15000,
+      "carImage": "https://www.pelago.com/img/products/JP-Japan/1-hour-tokyo-tour-in-tokyo-drift-mazda-rx7/8a29048d-b734-40d5-b36d-a2bd901ba5b9_1-hour-tokyo-tour-in-tokyo-drift-mazda-rx7-large.jpg",
+      "regNo": "AB-123"
+    },
+    {
+      "carId": 4812,
+      "brand": "Corolla",
+      "model": "city",
+      "year": 2020,
+      "color": "white",
+      "dailyRate": 152000,
+      "carImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKjAuVkliHks2dCbeX6OjzcKTvUufckCFxkw&s",
+      "regNo": "7854"
+    },
+    {
+      "carId": 4813,
+      "brand": "Tesla",
+      "model": "3",
+      "year": 2021,
+      "color": "grey",
+      "dailyRate": 21000,
+      "carImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXtQA_E5mLWcIishfiAjxhWE0bwEy5cG6pNA&s",
+      "regNo": "7895"
+    },
+    {
+      "carId": 4814,
+      "brand": "nissan",
+      "model": "Altima",
+      "year": 2024,
+      "color": "white",
+      "dailyRate": 150001,
+      "carImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoqM3o5KmGChhsHYi4w8vHuQDe10gT_l8cGA&s",
+      "regNo": "4587"
+    },
+    {
+      "carId": 4815,
+      "brand": "toyota",
+      "model": "Camry",
+      "year": 2022,
+      "color": "white",
+      "dailyRate": 154000,
+      "carImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmkjuOL6zSihKXVqqjhprTYiQz1c9n8GBuw&s",
+      "regNo": "8752"
+    },
+    {
+      "carId": 4816,
+      "brand": "Maserati GranTurismo",
+      "model": "Trofeo",
+      "year": 2024,
+      "color": "white",
+      "dailyRate": 210000,
+      "carImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUWBI5cG4Azn32Cu4UvOLTx2uQdk5TSjfLUA&s",
+      "regNo": "4572"
+    },
+    {
+      "carId": 4818,
+      "brand": "ambasidaor",
+      "model": "2023",
+      "year": 2025,
+      "color": "Red",
+      "dailyRate": 120,
+      "carImage": "yes",
+      "regNo": "54vc5454"
+    },
+    {
+      "carId": 4819,
+      "brand": "BMW",
+      "model": "BMW-A",
+      "year": 2023,
+      "color": "White",
+      "dailyRate": 4501,
+      "carImage": "https://static0.topspeedimages.com/wordpress/wp-content/uploads/jpg/200812/mazda-rx-8-circuit-t.jpg",
+      "regNo": "B-2020"
+    },
+    {
+      "carId": 4820,
+      "brand": "string",
+      "model": "string",
+      "year": 0,
+      "color": "string",
+      "dailyRate": 0,
+      "carImage": "string",
+      "regNo": "string"
+    },
+    {
+      "carId": 4821,
+      "brand": "Mahindra",
+      "model": "Scoripo",
+      "year": 2023,
+      "color": "Red",
+      "dailyRate": 2000,
+      "carImage": "https://carsales.pxcrush.net/general/car/spec/S0004YU4.jpg?width=618&height=412&watermark=1637675764",
+      "regNo": "MH-012346"
+    }
+  ]
